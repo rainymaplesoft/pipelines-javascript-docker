@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rainymaplesoftpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rainymaplesoftpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: rainymaplesoftpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: rainymaplesoftpipelinesjavascriptdocker 
+          image: containerregistryjgli01.azurecr.io/rainymaplesoftpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
